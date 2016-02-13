@@ -35,7 +35,7 @@ gulp.task('watch', function () {
 gulp.task('babel', function() {
   return gulp
     .src("./tests/**/*.js")
-    .pipe(babel({ presets: ['es2015'] }))
+    .pipe(babel({ presets: [ 'es2015', 'stage-2'] }))
     .pipe(gulp.dest("./bin"))
     .pipe(shell(['node <%= file.path %>']));
 });
