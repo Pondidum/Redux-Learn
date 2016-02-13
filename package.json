@@ -1,0 +1,10 @@
+{
+  "name": "ReactLearn",
+  "version": "0.0.0",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-react": "^3.1.0"
+  }
+}
