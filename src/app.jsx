@@ -5,4 +5,5 @@ var App = React.createClass({
       <h1>Testing</h1>
     );
   }
+
 });
