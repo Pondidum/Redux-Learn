@@ -1,8 +1,8 @@
 var deepFreeze = require("deep-freeze");
 var expect = require("expect");
 
-import todos from './todos';
-import visibilityFilter from './visibilityFilter';
+import todos from '../app/todos';
+import visibilityFilter from '../app/visibilityFilter';
 
 const todoApp = (state = {}, action) => {
   return {
