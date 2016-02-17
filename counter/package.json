@@ -4,7 +4,7 @@
   "description": "1st demo",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register --require ./test/setup.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +15,10 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-react-hmre": "^1.1.0",
     "babel-register": "^6.5.2",
+    "cross-env": "^1.0.7",
+    "expect": "^1.14.0",
+    "jsdom": "^8.0.3",
+    "mocha": "^2.4.5",
     "webpack": "^1.12.13",
     "webpack-dev-middleware": "^1.5.1",
     "webpack-hot-middleware": "^2.7.1"
