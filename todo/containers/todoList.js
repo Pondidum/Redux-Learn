@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
+import Todo from '../components/todo'
+import { toggleTodo } from '../actions'
 
 const mapStateToProps = (state) => {
   return {
@@ -8,10 +9,28 @@ const mapStateToProps = (state) => {
   }
 }
 
-const TodoList = connect(mapStateToProps, null)(({ todos }) =>
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onTodoClick: (id) => {
+      dispatch(toggleTodo(id))
+    }
+  }
+}
+
+const component = ({ todos, onTodoClick }) => (
   <ul>
-    {todos.map(todo => <li key={todo.id}>{todo.text}</li>)}
+    {todos.map(todo =>
+      <Todo
+        key={todo.id}
+        {...todo}
+        onClick={ () => onTodoClick(todo.id) }
+      />)}
   </ul>
 )
+
+const TodoList = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(component)
 
 export default TodoList
