@@ -1,11 +1,11 @@
 import React from 'react'
 import AddTodo from '../containers/addTodo'
-import TodoList from '../containers/todoList'
+import VisibleTodoList from '../containers/visibleTodoList'
 
 const App = () => (
   <div>
     <AddTodo />
-    <TodoList />
+    <VisibleTodoList />
   </div>
 )
 
